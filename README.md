@@ -7,6 +7,7 @@
 
 - [Installation](#installation)
 - [API](#api)
+  - [`compact(array)`](#compactarray)
   - [`get(path, ?defaultValue)`](#getpath-defaultvalue)
   - [`map(iteratee)`](#mapiteratee)
 
@@ -19,6 +20,15 @@ yarn add @macklinu/fn
 ```
 
 ## API
+
+### `compact(array)`
+
+```js
+import { compact } from '@macklinu/fn'
+
+compact([0, 1, 2, false, '', 3, null, undefined]) // => [1, 2, 3]
+compact() // => []
+```
 
 ### `get(path, ?defaultValue)`
 
