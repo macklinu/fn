@@ -11,6 +11,7 @@
   - [`get(path, ?defaultValue)`](#getpath-defaultvalue)
   - [`join(separator)`](#joinseparator)
   - [`map(iteratee)`](#mapiteratee)
+  - [`sum(array)`](#sumarray)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -65,4 +66,13 @@ getNames([{ name: 'Alice' }, { name: 'Bob' }]) // => ['Alice, 'Bob']
 
 let getNames = map('name')
 getNames([{ name: 'Alice' }, { name: 'Bob' }]) // => ['Alice, 'Bob']
+```
+
+### `sum(array)`
+
+```js
+import { sum } from '@macklinu/fn'
+
+sum([1, 2, 3]) // => 6
+sum() // => 0
 ```
