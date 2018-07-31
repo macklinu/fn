@@ -9,6 +9,7 @@
 - [API](#api)
   - [`compact(array)`](#compactarray)
   - [`get(path, ?defaultValue)`](#getpath-defaultvalue)
+  - [`join(separator)`](#joinseparator)
   - [`map(iteratee)`](#mapiteratee)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -39,6 +40,19 @@ get('a')({ a: 1 }) // => 1
 get('a.b')({ a: { b: 2 } }) // => 2
 get('a.b.c', '$')({}) // => '$'
 get()() // => undefined
+```
+
+### `join(separator)`
+
+```js
+import { join } from '@macklinu/fn'
+
+join()([1, 2, 3]) // => '1,2,3'
+
+let joinSquiggly = join('~')
+joinSquiggly(['live', 'laugh', 'love']) // => 'live~laugh~love'
+
+join()() // => ''
 ```
 
 ### `map(iteratee)`
