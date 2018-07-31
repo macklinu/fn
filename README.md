@@ -2,6 +2,15 @@
 
 > Reimplementing Lodash for the sake of learning
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Installation](#installation)
+- [API](#api)
+  - [`get(obj, path, ?defaultValue)`](#getobj-path-defaultvalue)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation
 
 ```
