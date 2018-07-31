@@ -1,0 +1,21 @@
+{
+  "name": "@macklinu/fn",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "esm": "^3.0.72"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.6",
+    "prettier": "^1.14.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}
