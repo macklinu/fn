@@ -1,10 +1,10 @@
-import test from 'ava'
-import compact from './compact'
+import { test, expect } from 'vitest'
+import { compact } from './compact'
 
-test('compact() removes falsy values', t => {
-  t.deepEqual(compact([0, 1, 2, false, '', 3, null, undefined]), [1, 2, 3])
+test('compact() removes falsy values', () => {
+  expect(compact([0, 1, 2, false, '', 3, null, undefined])).toEqual([1, 2, 3])
 })
 
-test('compact() returns [] when passed falsy parameter', t => {
-  t.deepEqual(compact(), [])
+test('compact() returns [] when passed falsy parameter', () => {
+  expect(compact()).toEqual([])
 })
