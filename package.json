@@ -1,16 +1,50 @@
 {
   "name": "@macklinu/fn",
+  "description": "Type-safe utility functions that I write and use a lot",
   "version": "0.0.0",
-  "main": "src/index.js",
+  "source": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "license": "MIT",
   "type": "module",
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.11.0",
+  "author": "Macklin Underdown <macklinu@gmail.com>",
+  "repository": "macklinu/fn",
   "scripts": {
+    "build": "tsup",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check-exports": "attw --profile esm-only --pack .",
     "test": "vitest"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.1",
+    "@macklinu/eslint-config": "^0.4.2",
     "@macklinu/prettier-config": "^0.0.0",
-    "prettier": "^3.5.2",
-    "vitest": "^3.0.6"
+    "@total-typescript/tsconfig": "^1.0.4",
+    "eslint": "^9.27.0",
+    "prettier": "^3.5.3",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
   }
 }
